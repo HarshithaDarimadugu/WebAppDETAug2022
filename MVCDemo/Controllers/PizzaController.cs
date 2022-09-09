@@ -55,5 +55,19 @@ namespace MVCDemo.Controllers
             return RedirectToAction("List");
 
         }
+        public IActionResult Update()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Update(int id, string name, int size, decimal price, bool isglutenfree)
+        {
+            Pizza p = new Pizza { Id = id, Name = name, Size = (PizzaSize)size, Price = price, IsGlutenFree = isglutenfree };
+            PizzaServices.Update(p);
+            return RedirectToAction("List");
+        }
     }
 }
+    
+

@@ -7,6 +7,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data1\**" />
+    <Compile Remove="Views\Friends\**" />
+    <Compile Remove="Views\NewFolder\**" />
+    <Content Remove="Data1\**" />
+    <Content Remove="Views\Friends\**" />
+    <Content Remove="Views\NewFolder\**" />
+    <EmbeddedResource Remove="Data1\**" />
+    <EmbeddedResource Remove="Views\Friends\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
+    <None Remove="Data1\**" />
+    <None Remove="Views\Friends\**" />
+    <None Remove="Views\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BookingsController.cs" />
+    <Compile Remove="Controllers\FriendsController.cs" />
+    <Compile Remove="Data\Friend.cs" />
+    <Compile Remove="Data\Friends.cs" />
+    <Compile Remove="Data\PizzaContext.cs" />
+    <Compile Remove="Services\FriendService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
   </ItemGroup>
 
